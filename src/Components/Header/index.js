@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Feed from '../Feed';
-import * as S from './styled';
+import React from "react";
+import { Link } from "react-router-dom";
+import Feed from "../Feed";
+import * as S from "./styled";
 
 const Header = () => {
   return (
@@ -18,7 +18,6 @@ const Header = () => {
           </S.Navbar>
         </S.Container>
       </S.Header>
-      <Feed />
     </>
   );
 };
