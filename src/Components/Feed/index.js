@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styled";
 
-const Feed = ({ url, title, content }) => {
+const Feed = ({ url, title, content, urlToImage }) => {
   return (
     <S.Feed>
       <S.Wrapper>

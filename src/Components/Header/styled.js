@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Header = styled.div`
   background: #c4e2ff;
@@ -36,4 +36,5 @@ export const Li = styled.li`
 export const A = styled.a`
   text-decoration: none;
   color: #333333;
+  margin: 0 0.7rem;
 `;

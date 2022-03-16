@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FeedArticle from "./Components/FeedArticle";
 import Header from "./Components/Header/index";
 
@@ -8,8 +9,11 @@ function App() {
   return (
     <div>
       <GlobalStyle />
-      <Header />
-      <FeedArticle />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<FeedArticle />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

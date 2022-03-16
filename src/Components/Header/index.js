@@ -12,7 +12,7 @@ const Header = () => {
           <S.Navbar>
             <S.Ul>
               <S.Li>
-                <S.A href="#">Top Headlines</S.A>
+                <S.A href="#">Top Headlines BR</S.A>
               </S.Li>
             </S.Ul>
           </S.Navbar>

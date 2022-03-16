@@ -36,3 +36,9 @@ export const ModalFeed = styled.div`
   flex: 1;
   margin-bottom: 1em;
 `;
+
+export const Img = styled.img`
+  width: 300px;
+  height: auto;
+  max-width: 100%;
+`;
