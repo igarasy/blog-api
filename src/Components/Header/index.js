@@ -12,7 +12,17 @@ const Header = () => {
           <S.Navbar>
             <S.Ul>
               <S.Li>
-                <S.A href="#">Top Headlines BR</S.A>
+                <S.StyledLink to="/">Top Headlines BR</S.StyledLink>
+              </S.Li>
+              <S.Li>
+                <S.StyledLink to="/topheadlinesusa">
+                  Top Headlines USA
+                </S.StyledLink>
+              </S.Li>
+              <S.Li>
+                <S.StyledLink to="/topheadlinescanada">
+                  Top Headlines Canada
+                </S.StyledLink>
               </S.Li>
             </S.Ul>
           </S.Navbar>

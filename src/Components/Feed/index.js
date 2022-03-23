@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styled";
 
-const Feed = ({ url, title, content, urlToImage }) => {
+const Feed = ({ url, title, content }) => {
   return (
     <S.Feed>
       <S.Wrapper>
@@ -9,7 +9,9 @@ const Feed = ({ url, title, content, urlToImage }) => {
           <S.ModalTitle>{title}</S.ModalTitle>
           {content}
           <div>
-            <a href={url}>{url}</a>
+            <a target="_blank" href={url}>
+              {url}
+            </a>
           </div>
         </S.ModalFeed>
       </S.Wrapper>

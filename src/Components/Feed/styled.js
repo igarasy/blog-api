@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
   border: solid black;
   border-radius: 0.5rem;
   padding: 1rem;
+  flex-wrap: nowrap;
 `;
 
 export const ModalTitle = styled.h1`
@@ -32,7 +33,7 @@ export const ModalFeed = styled.div`
   align-self: flex-end;
   padding: 0;
   line-height: 1.6em;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex: 1;
   margin-bottom: 1em;
 `;
