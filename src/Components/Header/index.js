@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Feed from "../Feed";
 import * as S from "./styled";
 
 const Header = () => {
@@ -12,15 +10,17 @@ const Header = () => {
           <S.Navbar>
             <S.Ul>
               <S.Li>
-                <S.StyledLink to="/">Top Headlines BR</S.StyledLink>
+                <S.StyledLink to="/topheadlines/br">
+                  Top Headlines BR
+                </S.StyledLink>
               </S.Li>
               <S.Li>
-                <S.StyledLink to="/topheadlinesusa">
+                <S.StyledLink to="/topheadlines/usa">
                   Top Headlines USA
                 </S.StyledLink>
               </S.Li>
               <S.Li>
-                <S.StyledLink to="/topheadlinescanada">
+                <S.StyledLink to="/topheadlines/ca">
                   Top Headlines Canada
                 </S.StyledLink>
               </S.Li>

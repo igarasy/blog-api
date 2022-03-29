@@ -1,20 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
 import Feed from "../Feed/index";
-import { Img } from "../Feed/styled";
 import Header from "../Header/index";
 import Loading from "../Loading/index";
-import Pagination from "../../Helpers/Pagination";
+import * as S from "./styled";
+import NavBarCategories from "../NavBarCategories";
+import { API_URL } from "../../api";
 
-const FeedArticle = ({ url }) => {
+const FeedArticle = ({ country }) => {
   const { data, request, loading, error } = useFetch();
 
+  function fetchArticlesCategories(category) {
+    const searchParameters = new URLSearchParams("");
+    searchParameters.set("category", category);
+    searchParameters.set("country", country);
+    request(API_URL + searchParameters.toString());
+  }
+
   React.useEffect(() => {
-    async function fetchArticles() {
-      await request(url);
+    function fetchArticles() {
+      const searchParameters = new URLSearchParams("");
+
+      searchParameters.set("country", country);
+      console.log(searchParameters.toString());
+      request(API_URL + searchParameters.toString());
     }
     fetchArticles();
-  }, [url]);
+    console.log(data);
+  }, [country]);
 
   if (error) return <div>{error}</div>;
   if (loading) return <Loading />;
@@ -22,7 +36,7 @@ const FeedArticle = ({ url }) => {
     return (
       <>
         <Header />
-
+        <NavBarCategories fetchArticlesCategories={fetchArticlesCategories} />
         <div>
           {data.articles.map((article) => (
             <Feed

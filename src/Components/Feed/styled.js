@@ -5,13 +5,13 @@ export const Feed = styled.section`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  flex-wrap: nowrap;
 
-  height: 100%;
-  margin-top: 100px;
+  margin-top: 1rem;
 `;
 
 export const Wrapper = styled.div`
-  margin-top: 200px;
+  margin-top: 100px;
   max-width: 760px;
   height: 100%;
   display: flex;
