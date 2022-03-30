@@ -20,7 +20,13 @@ export const Li = styled.li`
 `;
 
 export const Button = styled.button`
+  &:hover {
+    background: #c4e2ff;
+  }
   border-radius: 0.5rem;
   padding: 1rem;
+
   border: none;
+  cursor: pointer;
+  transition: 0.5s;
 `;

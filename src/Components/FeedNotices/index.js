@@ -1,14 +1,6 @@
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import FeedArticle from "../FeedArticle";
-import {
-  HEADLINES_CA,
-  HEADLINES_USA,
-  HEADLINES_BR,
-  SPORTS_CA,
-  SPORTS_USA,
-  SPORTS_BR,
-} from "../../api";
 
 const FeedNotices = () => {
   return (

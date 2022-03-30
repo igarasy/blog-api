@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
 import Feed from "../Feed/index";
 import Header from "../Header/index";
 import Loading from "../Loading/index";
-import * as S from "./styled";
 import NavBarCategories from "../NavBarCategories";
 import { API_URL } from "../../api";
 
