@@ -1,27 +1,23 @@
 import React from "react";
 import * as S from "./styled";
 
-const NavBarCategories = ({ fetchArticlesCategories }) => {
+const NavBarCategories = ({ handleCategory }) => {
   return (
     <S.Navbar>
       <S.Ul>
         <S.Li>
-          <S.Button onClick={() => fetchArticlesCategories("sports")}>
-            Sports
-          </S.Button>
+          <S.Button onClick={() => handleCategory("sports")}>Sports</S.Button>
         </S.Li>
         <S.Li>
-          <S.Button onClick={() => fetchArticlesCategories("business")}>
+          <S.Button onClick={() => handleCategory("business")}>
             Business
           </S.Button>
         </S.Li>
         <S.Li>
-          <S.Button onClick={() => fetchArticlesCategories("health")}>
-            Health
-          </S.Button>
+          <S.Button onClick={() => handleCategory("health")}>Health</S.Button>
         </S.Li>
         <S.Li>
-          <S.Button onClick={() => fetchArticlesCategories("technology")}>
+          <S.Button onClick={() => handleCategory("technology")}>
             Technology
           </S.Button>
         </S.Li>
