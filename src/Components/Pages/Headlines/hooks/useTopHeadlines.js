@@ -8,7 +8,7 @@ const useTopHeadlines = () => {
   const { country, category } = useParams();
   const navigate = useNavigate();
 
-  return { getTopHeadline };
+  return <div>olá</div>;
 };
 
 export default useTopHeadlines;

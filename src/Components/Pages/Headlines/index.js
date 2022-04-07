@@ -3,35 +3,21 @@ import useFetch from "../../../Hooks/useFetch";
 import Feed from "../../Feed";
 import Loading from "../../Loading";
 import NavBarCategories from "../../NavBarCategories";
-import { API_URL } from "../../../api";
-import { useNavigate, useParams } from "react-router-dom";
-import getTopHeadline from "../Headlines/hooks/useTopHeadlines";
-
-/*pegaremos o country agora através do useParams, desestruturizando ele  */
+import { useParams } from "react-router-dom";
+import useArticles from "../../../Hooks/useArticles";
 
 const Headlines = () => {
-  const { country, category } = useParams();
-  const { data, request, loading, error } = useFetch();
-  const navigate = useNavigate();
-  const { getHeadline } = getTopHeadline();
+  const { country } = useParams();
+  const { loading, error } = useFetch();
+  const { fetchArticlesCountry, data, fetchArticlesCategory } = useArticles();
 
   const handleCategory = (category) => {
-    navigate(`/topheadlines/${country}/${category}`);
-    const searchParameters = new URLSearchParams("");
-    searchParameters.set("category", category);
-    searchParameters.set("country", country);
-    request(API_URL + searchParameters.toString());
+    fetchArticlesCategory(category);
   };
 
   React.useEffect(() => {
-    function fetchArticles() {
-      const searchParameters = new URLSearchParams("");
-      searchParameters.set("country", country);
-      console.log(getHeadline);
-      request(API_URL + searchParameters.toString());
-    }
-    fetchArticles();
-  }, [country, category]);
+    fetchArticlesCountry(country);
+  }, [country]);
 
   if (error) return <div>{error}</div>;
   if (loading) return <Loading />;
@@ -42,7 +28,7 @@ const Headlines = () => {
         <div>
           {data.articles.map((article) => (
             <Feed
-              key={article.description}
+              key={article.id}
               title={article.title}
               content={article.content}
               url={article.url}
