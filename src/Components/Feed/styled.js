@@ -5,13 +5,13 @@ export const Feed = styled.section`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  flex-wrap: nowrap;
 
-  height: 100%;
-  margin-top: 100px;
+  margin-top: 1rem;
 `;
 
 export const Wrapper = styled.div`
-  margin-top: 200px;
+  margin-top: 100px;
   max-width: 760px;
   height: 100%;
   display: flex;
@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
   border: solid black;
   border-radius: 0.5rem;
   padding: 1rem;
+  flex-wrap: nowrap;
 `;
 
 export const ModalTitle = styled.h1`
@@ -32,7 +33,7 @@ export const ModalFeed = styled.div`
   align-self: flex-end;
   padding: 0;
   line-height: 1.6em;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex: 1;
   margin-bottom: 1em;
 `;

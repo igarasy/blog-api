@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Header = styled.div`
   background: #c4e2ff;
@@ -25,6 +26,7 @@ export const Navbar = styled.nav`
 
 export const Ul = styled.ul`
   display: flex;
+  width: auto;
   list-style: none;
 `;
 
@@ -33,8 +35,7 @@ export const Li = styled.li`
   margin: 0 0.7rem;
 `;
 
-export const A = styled.a`
+export const StyledLink = styled(Link)`
   text-decoration: none;
   color: #333333;
-  margin: 0 0.7rem;
 `;
